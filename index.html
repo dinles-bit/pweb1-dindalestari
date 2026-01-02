@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio | Pastel Vibe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo"></div>
+
+        <body background="header.jpg">
+            <marquee>
+                <h2>Selamat Datang di Website Saya</h2>
+            </marquee>
+        </body>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#karya">Karya</a></li>
+            <li><a href="#media">Media</a></li>
+        </ul>
+
+        <div class="mode-toggle" id="theme-toggle">
+            <button id="darkToggle">🌙</button>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Halo, Saya <span class="typing"></span></h1>
+            <p>Selamat datang di ruang kreatif digital saya.</p>
+            <a href="#profile" class="btn">Kenali Saya</a>
+        </div>
+    </section>
+
+    <section id="profile">
+    <div class="profile-container">
+        <!-- KARTU UTAMA -->
+        <h2 class="section-title">Profil Saya</h2>
+        <div class="profile-card">
+            <h3 class="card-title">Identitas Diri</h3>
+            <table>
+                <tr>
+                    <td>Nama</td>
+                    <td>: Dinda Lestari</td>
+                </tr>
+                <tr>
+                    <td>NIM</td>
+                    <td>: 251011700363</td>
+                </tr>
+                <tr>
+                    <td>Kelas</td>
+                    <td>: 01SIFP006</td>
+                </tr>
+                <tr>
+                    <td>Program Studi</td>
+                    <td>: Sistem Informasi</td>
+                </tr>
+                <tr>
+                    <td>Fakultas</td>
+                    <td>: Ilmu Komputer</td>
+                </tr>
+                <tr>
+                    <td>Universitas</td>
+                    <td>: Universitas Pamulang</td>
+                </tr>
+            </table>
+
+            <button onclick="toggleDetail()">Lihat Detail Lengkap</button>
+        </div>
+        </div>
+    </section>
+
+        <!-- DETAIL TAMBAHAN (HIDDEN) -->
+        <div class="profile-detail" id="detailProfil">
+    <h3>Data Pribadi Lengkap</h3>
+    <ul>
+        <li><strong>Nama Lengkap</strong> : Dinda Lestari</li>
+        <li><strong>Tempat, Tanggal Lahir</strong> : Wonogiri, 5 Desember 2006</li>
+        <li><strong>Jenis Kelamin</strong> : Perempuan</li>
+        <li><strong>Domisili</strong> : Tangerang Selatan</li>
+        <li><strong>Status</strong> : Mahasiswa Aktif</li>
+        <li><strong>Hobi</strong> : UI Design, Web Development, Editing Konten</li>
+        <li><strong>Cita-cita</strong> : Web Developer Profesional</li>
+    </ul>
+</div>
+    </div>
+    </section>
+
+    <section id="karya" class="bg-pastel">
+        <h2 class="section-title">Karya & Project</h2>
+
+        <div class="grid-container">
+
+            <div class="card">
+                <img src="proyek.png" alt="Portal News">
+                <h3>Mockup News Portal</h3>
+                <p>Membuat News Portal menggunakan div css.</p>
+            </div>
+
+            <div class="card">
+                <img src="proyek2.png" alt="Form">
+                <h3>Membuat Form menghitung Usia Mahasiswa</h3>
+                <p>Dengan Mengisi Tahun Lahir.</p>
+            </div>
+
+            <div class="card">
+                <img src="proyek3.png" alt="website">
+                <h3>Membuat Website Sederhana</h3>
+                <p>Dengan website tampilan minimalist.</p>
+            </div>
+
+            <div class="card">
+                <img src="proyek4.png" alt="form">
+                <h3>Membuat Form Recruitment</h3>
+                <p>Form Penerimaan Karyawan baru.</p>
+            </div>
+
+            <div class="card">
+                <img src="Proyek5.png" alt="lay out">
+                <h3>Lay Out Portal News</h3>
+                <p>Kerangka sebelum Portal News.</p>
+            </div>
+
+            <div class="card">
+                <img src="proyek6.png" alt="kalkulator">
+                <h3>Membuat Form Menghitung Belanjaan</h3>
+                <p>Untuk menghitung Jumlah Harga barang.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="media" class="section media">
+        <h2 class="section-title">Media</h2>
+        <!-- FOTO -->
+        <h3>Galeri Foto</h3>
+        <div class="gallery">
+            <img src="foto1.jpg.jpeg" onclick="openPopup(this.src)">
+            <img src="foto2.jpg.jpeg" onclick="openPopup(this.src)">
+            <img src="foto3.jpg.jpeg" onclick="openPopup(this.src)">
+            <img src="foto4.jpg.jpeg" onclick="openPopup(this.src)">
+        </div>
+
+        <!-- VIDEO -->
+        <h3>Video</h3>
+        <video controls>
+            <source src="video.mp4" type="video/mp4">
+        </video>
+
+        <!-- AUDIO -->
+        <h3>🎧 Audio</h3>
+        <audio controls>
+            <source src="Avenged Sevenfold - Seize the Day.mp3" type="audio/mpeg">
+        </audio>
+
+        <!-- DOKUMEN -->
+        <h3>📄 Dokumen</h3>
+        <a class="doc-link" href="dokumenwebsitepweb1.pdf" target="_blank">
+            Lihat Dokumen Portofolio
+        </a>
+    </section>
+
+    <div id="popup" class="popup">
+        <span onclick="closePopup()">×</span>
+        <img id="popupImg">
+    </div>
+
+    <section id="kontak" class="contact-section">
+        <h2 class="section-title">Kontak & Send Message</h2>
+
+        <div class="contact-card">
+            <h3>Send Message</h3>
+
+            <form id="contactForm">
+                <input type="text" id="nama" placeholder="Nama Lengkap" required>
+
+                <input type="email" id="email" placeholder="Email Aktif" required>
+
+                <textarea id="pesan" placeholder="Tulis pesan anda..." required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Dinda Portfolio</h3>
+
+            <div class="footer-links">
+                <a href="https://www.instagram.com/dindalsst?igsh=MWY5ODRvOXBxNm14eg==" target="_blank">Instagram</a>
+                <a href="mailto:lestaridnd11@gmail.com">Email</a>
+                <a href="https://github.com/dinles-bit" target="_blank">GitHub</a>
+            </div>
+            <p>© <span id="year"></span> • Dibuat oleh Dinda Lestari</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
